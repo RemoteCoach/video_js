@@ -54,7 +54,7 @@ class VideoJsWidgetState extends State<VideoJsWidget> {
               ..style.maxHeight = "100%"
               ..style.width = "100%"
               // ..style.height = "auto"
-              ..className = "video-js vjs-default-skin",
+              ..className = "video-js vjs-big-play-centered",
             html.ScriptElement()
               ..innerHtml = VideoJsScripts().videojsCode(
                   widget.videoJsController.playerId,
