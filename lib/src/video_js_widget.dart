@@ -54,7 +54,7 @@ class VideoJsWidgetState extends State<VideoJsWidget> {
               ..style.minHeight = "100%"
               ..style.minHeight = "100%"
               ..style.width = "100%"
-              ..style.height = "auto"
+              // ..style.height = "auto"
               ..className = "video-js vjs-default-skin",
             html.ScriptElement()
               ..innerHtml = VideoJsScripts().videojsCode(

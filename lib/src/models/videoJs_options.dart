@@ -96,6 +96,18 @@ class VideoJsOptions {
       data['suppressNotSupportedError'] = this.suppressNotSupportedError;
     if (this.sources != null)
       data['sources'] = this.sources!.map((v) => v.toJson()).toList();
+    final other = {
+      'plugins': {
+        'httpSourceSelector': {'default': '"auto"'}
+      },
+      'controls': true,
+      'preload': '"none"',
+      'techOrder': ['"chromecast"', '"html5"'],
+      'html5': {
+        'hls': {'overrideNative': '!videojs.browser.IS_SAFARI'}
+      }
+    };
+    data.addAll(other);
     return data;
   }
 }

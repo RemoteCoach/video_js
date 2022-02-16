@@ -2,6 +2,8 @@ class VideoJsScripts {
   String videojsCode(String playerId, Map<String, dynamic>? options) => """
     var player = videojs('$playerId', ${options},function() {
     callBackToDartSide('$playerId', 'onReady' , 'true');
+    player.httpSourceSelector();
+    player.chromecast();
     });""";
 
   String globalAutoSetup(bool status) => """
