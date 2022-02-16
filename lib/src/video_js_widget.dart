@@ -51,8 +51,7 @@ class VideoJsWidgetState extends State<VideoJsWidget> {
           ..children = [
             html.VideoElement()
               ..id = widget.videoJsController.playerId
-              ..style.minHeight = "100%"
-              ..style.minHeight = "100%"
+              ..style.maxHeight = "100%"
               ..style.width = "100%"
               // ..style.height = "auto"
               ..className = "video-js vjs-default-skin",
